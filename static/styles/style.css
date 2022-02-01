@@ -1,0 +1,29 @@
+body{
+	font-family: "Poppins", sans-serif;
+}
+.sliderContainer{
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+}
+.cardContainer{
+	margin: 20px;
+	width: 450px;
+	height: 400px;
+	border: 1px solid #000000;
+	border-radius: 50px;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+}
+.img{
+	width: 387px;
+	height: 290px;
+	margin: 20px;
+}
+.price{
+	text-align: center;
+}
+.imgSlider{
+	cursor: pointer;
+}

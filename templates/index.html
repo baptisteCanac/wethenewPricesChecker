@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>wethenew price updater</title>
+	<link rel="stylesheet" type="text/css" href="{{style}}">
+	<script type="text/javascript" src="{{js}}"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="sliderContainer">
+			<img src="{{sliderImg}}" class="imgSlider" id="firstImgSlider" onclick="openWethenewJordanOneHigh()">
+		</div>
+		<div class="sliderContainer">
+			<img src="{{secondSlider}}" class="imgSlider" id="secondImgSlider" onclick="openWethenewhttpsJordanOneDarkMarina()">
+		</div>
+		<div class="sliderContainer">
+			<img src="{{thirdSlider}}" class="imgSlider" id="thirdImgSlider" onclick="openWethenewJordanOneBubblegum()">
+		</div>
+		<div class="allCardsContainer">
+			<div class="cardContainer" onclick="openWethenewJordanOneEaster()">
+				<img src="{{jordanOneEaster}}" class="img">
+				<span class="price">{{priceJordan}}</span>
+			</div>
+			<div class="cardContainer" onclick="openWethenewYeezy350MonoMist()">
+				<img src="{{yeezy350MonoMist}}" class="img">
+				<span class="price">{{priceYeezy250MonoMist}}</span>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$("#firstImgSlider").show();
+		$("#secondImgSlider").hide();
+		$("#thirdImgSlider").hide();
+		function sliderLoop(){
+			$("#firstImgSlider").show();
+			$("#secondImgSlider").hide();
+			$("#thirdImgSlider").hide();
+			setTimeout(showSecondImg, 5000);
+		}
+		function showSecondImg(){
+			$("#firstImgSlider").hide();
+			$("#secondImgSlider").show();
+			$("#thirdImgSlider").hide();
+			setTimeout(showThirdImg, 5000)
+		}
+		function showThirdImg(){
+			$("#firstImgSlider").hide();
+			$("#secondImgSlider").hide();
+			$("#thirdImgSlider").show();
+			setTimeout(sliderLoop, 5000)
+		}
+		sliderLoop();
+	</script>
+</body>
+</html>
